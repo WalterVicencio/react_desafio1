@@ -88,3 +88,29 @@ button:focus-visible {
   background-color: black;
   color: white;
 }
+
+.card{
+  padding: 0;
+}
+
+.card-title{
+  text-align: left;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.card-body{
+  padding: 0;
+}
+
+.botones-card{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
