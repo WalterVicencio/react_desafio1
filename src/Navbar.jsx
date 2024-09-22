@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -9,15 +10,12 @@ import imgcerrado from './assets/img/cerrado.png';
 import imgcerrado_llave from './assets/img/cerrado_llave.png';
 
 
-function Cambiar(token) {
-    token = true;
-    console.log(token);
-}
+
 
 
 const Navbarr = () => {
     const total = 25000;
-    var token = false;
+    const [token, setToken] = useState(false);
 
     return(
     <Navbar collapseOnSelect expand="lg" className="navbar">
@@ -27,8 +25,9 @@ const Navbarr = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#features"><Button variant="outline-light"><img src={imgpizza} style={{width:20}}></img>Home</Button>{' '}</Nav.Link>
-            <Nav.Link href="#features"><Button onClick={Cambiar(token)} variant="outline-light"><img src={token==false ? imgcerrado_llave : imgabierto} style={{width:20}}></img>Login</Button>{' '}</Nav.Link>
-            <Nav.Link href="#features"><Button variant="outline-light"><img src={imgcerrado_llave} style={{width:20}}></img>Register</Button>{' '}</Nav.Link>
+            <Nav.Link href="#features"><Button onClick={() => setToken(true)} variant="outline-light"><img src={token==false ? imgcerrado_llave : imgabierto} style={{width:20}}></img>Login</Button>{' '}</Nav.Link>
+            {token==false ? <Nav.Link href="#features"><Button variant="outline-light"><img src={imgcerrado_llave} style={{width:20}}></img>Register</Button>{' '}</Nav.Link> : <Nav.Link href="#features"><Button onClick={() => setToken(false)} variant="outline-light"><img src={imgcerrado} style={{width:20}}></img>Logout</Button>{' '}</Nav.Link>}
+            
           </Nav>
           <Nav>
             <Nav.Link href="#features"><Button variant="outline-info"><img src={imgcarro} style={{width:20,marginRight:5}}></img>Total: ${total.toLocaleString("de-DE")}</Button>{' '}</Nav.Link>
