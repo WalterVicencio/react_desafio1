@@ -114,3 +114,13 @@ button:focus-visible {
   justify-content: center;
   gap: 3rem;
 }
+.Footer{
+  margin:3rem 0;
+  padding: 1rem;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+}
+.Footer p{
+  margin: 0;
+}

@@ -2,7 +2,9 @@ const Footer = () => {
 
     return(
         <>
-        <h1 style={{position: "static"}}>Footer</h1>
+        <div className="Footer">
+        <p>© 2021 - Pizzería Mamma Mia! - Todos los derechos reservados</p>
+        </div>
         </>
     ) 
 }
