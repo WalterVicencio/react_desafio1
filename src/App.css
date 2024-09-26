@@ -39,3 +39,15 @@
 .read-the-docs {
   color: #888;
 }
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  min-width: max-content;
+  align-items: center;
+  gap: 1rem;
+}
+
+.formulario label{
+  justify-content: left;
+}
