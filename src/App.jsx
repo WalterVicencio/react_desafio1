@@ -5,8 +5,6 @@ import Button from 'react-bootstrap/Button';
 import Navbarr from './Navbar';
 import Home from './Home';
 import Footer from './Footer';
-import Register from './Register';
-import Login from './Login';
 
 function App() {
 
@@ -14,9 +12,7 @@ function App() {
     <>
       <div>
         <Navbarr />
-       {/* <Home /> */}
-        {/*<Register />*/}
-        <Login />
+        <Home /> 
         <Footer />
       </div>  
     </>
